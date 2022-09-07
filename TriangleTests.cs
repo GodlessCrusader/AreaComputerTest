@@ -79,10 +79,27 @@ namespace AreaComputer.Test
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException), "Wrong input data")]
-        public void TriangleExistanceCheck_aMinus3b4c6_Exception()
+        public void SetSides_aMinus3b4c6_ArgumentException()
         {
             //arrange
             double a = -3;
+            double b = 4;
+            double c = 6;
+            Triangle triangle;
+
+            //act
+            triangle = new Triangle(a, b, c);
+
+            //assert
+
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException), "Wrong input data")]
+        public void SetSides_a0b4c6_ArgumentException()
+        {
+            //arrange
+            double a = 0;
             double b = 4;
             double c = 6;
             Triangle triangle;
